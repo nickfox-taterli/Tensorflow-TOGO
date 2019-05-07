@@ -85,6 +85,7 @@ protoc --python_out=. .\object_detection\protos\anchor_generator.proto .\object_
 (tensorflow1)  D:\tf\models\research\object_detection> jupyter notebook object_detection_tutorial.ipynb
 ```
 一步一步执行,最终会看到输出一个测试图,那么,就是测试成功了,否则,检测其他环境配置.
+![TestImg](https://www.lijingquan.net/wp-content/uploads/2019/05/img_5cd17e9dda5f2.png)
 
 ### 3. 标记图片
 #### 3a. 准备图片
@@ -94,6 +95,8 @@ protoc --python_out=. .\object_detection\protos\anchor_generator.proto .\object_
 
 #### 3b. 标记图片
 标记工具:[LabelImg](https://github.com/tzutalin/labelImg)
+
+![LabelImg](https://www.lijingquan.net/wp-content/uploads/2019/05/img_5cd17dd5b717e.png)
 
 具体如何标记的,就是拿框框框选,然后保存,然后继续下张图~ 如果不懂,那么可以自己谷歌一下.
 
@@ -196,4 +199,6 @@ python export_inference_graph.py --input_type image_tensor --pipeline_config_pat
 
 ### 8. 赶紧跑一下新模型.
 具体参考例子源码.
+
+![Sample](https://www.lijingquan.net/wp-content/uploads/2019/05/img_5cd17df0b5e73.png)
 
