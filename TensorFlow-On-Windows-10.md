@@ -95,7 +95,7 @@ protoc --python_out=. .\object_detection\protos\anchor_generator.proto .\object_
 #### 3b. 标记图片
 标记工具:[LabelImg](https://github.com/tzutalin/labelImg)
 
-具体如何标记的,要看视频教程~ 想了好久也不知道文字如何表达.
+具体如何标记的,就是拿框框框选,然后保存,然后继续下张图~ 如果不懂,那么可以自己谷歌一下.
 
 ### 4. Generate Training Data
 当你标记完成之后,还应该把每个XML数据,转成单一的CSV数据:
@@ -104,7 +104,6 @@ protoc --python_out=. .\object_detection\protos\anchor_generator.proto .\object_
 ```
 然后还要写一下标记的指导文件generate_tfrecord.py:
 ```
-# TO-DO replace this with label map
 def class_text_to_int(row_label):
     if row_label == 'nine':
         return 1
