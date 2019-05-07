@@ -23,7 +23,7 @@
  - C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin
 
 ### 2. 设置Anaconda虚拟环境
-#### 2a. Download TensorFlow Object Detection API repository from GitHub 
+#### 2a. 下载模型
 下载 https://github.com/tensorflow/models 的最新版本,你可以通过点击"Clone or Download"下载ZIP文件,然后解压,我目前解压到D:\tf\models中.
 
 #### 2b. 下载Faster-RCNN-Inception-V2-COCO基础模型
