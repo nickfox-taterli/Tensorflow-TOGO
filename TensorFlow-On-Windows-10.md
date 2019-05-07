@@ -179,7 +179,6 @@ item {
   - label_map_path:  "D:/tf/models/research/object_detection/training/labelmap.pbtxt"
 
 ### 6. 开始训练
-**UPDATE 9/26/18:** 
 训练就简单了,切换到research目录下,进行训练:
 ```
 python object_detection\model_main.py --pipeline_config_path=object_detection\training\faster_rcnn_inception_v2_pets.config --model_dir=object_detection\images --num_train_steps=50000 --sample_1_of_n_eval_examples=1 --alsologtostderr
