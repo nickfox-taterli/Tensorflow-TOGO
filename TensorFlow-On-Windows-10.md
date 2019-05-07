@@ -91,7 +91,7 @@ protoc --python_out=. .\object_detection\protos\anchor_generator.proto .\object_
 #### 3a. 准备图片
 准备一大堆图片(自然拍照就可以),越多越好,至少也要几百张.并且分辨率不能太低(小于32*32),也不能太高(大于720*1280),文件大小也不能太大(小于200K),文件大小太大,分辨率太高的话,会严重影响训练速度,分辨率太小的话,影响准确度.
 
-一般我们随机防止20%的图片到测试集 \object_detection\images\test directory, 还有 80% 数据用于训练集 \object_detection\images\train directory.如果数据量超大(大于百万图),还应该有验证集.
+一般我们随机放置20%的图片到测试集 \object_detection\images\test directory, 还有 80% 数据用于训练集 \object_detection\images\train directory.如果数据量超大(大于百万图),还应该有验证集.
 
 #### 3b. 标记图片
 标记工具:[LabelImg](https://github.com/tzutalin/labelImg)
