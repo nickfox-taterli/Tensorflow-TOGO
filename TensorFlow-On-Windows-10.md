@@ -54,7 +54,7 @@ C:\> activate tensorflow1
 (tensorflow1) C:\> pip install matplotlib
 (tensorflow1) C:\> pip install pandas
 (tensorflow1) C:\> pip install opencv-python
-(tensorflow1) C:\> pip install pycocotools
+(tensorflow1) C:\> pip install pycocotools <= 通常会失败,谷歌能找到方法.
 ```
 
 #### 2d. 配置 PYTHONPATH 环境变量
@@ -163,20 +163,20 @@ item {
 ```
 
 #### 5b. 配置训练
-复制C:\tf1\models\research\object_detection\samples\configs\faster_rcnn_inception_v2_pets.config 到 \object_detection\training 目录然后编辑.
+复制D:\tf\models\research\object_detection\samples\configs\faster_rcnn_inception_v2_pets.config 到 \object_detection\training 目录然后编辑.
 
 - Line 9. num_classes <= 训练集里类型数,有多少就写多少,我这里写36.
 - Line 106. fine_tune_checkpoint <= "D:/tf/models/research/object_detection/faster_rcnn_inception_v2_coco_2018_01_28/model.ckpt"
 
 - Lines 123 and 125. :
-  - input_path : "D:/tf/models/research/object_detection/faster_rcnn_inception_v2_coco_2018_01_28/train.record"
-  - label_map_path: "D:/tf/models/research/object_detection/faster_rcnn_inception_v2_coco_2018_01_28/training/labelmap.pbtxt"
+  - input_path : "D:/tf/models/research/object_detection/train.record"
+  - label_map_path:  "D:/tf/models/research/object_detection/training/labelmap.pbtxt"
 
 - Line 130. num_examples <= \images\test 目录有多少图片就写多少,我这里有67张.
 
 - Lines 135 and 137. :
-  - input_path : "D:/tf/models/research/object_detection/faster_rcnn_inception_v2_coco_2018_01_28/test.record"
-  - label_map_path: "D:/tf/models/research/object_detection/faster_rcnn_inception_v2_coco_2018_01_28/training/labelmap.pbtxt"
+  - input_path : "D:/tf/models/research/object_detection/test.record"
+  - label_map_path:  "D:/tf/models/research/object_detection/training/labelmap.pbtxt"
 
 ### 6. 开始训练
 **UPDATE 9/26/18:** 
